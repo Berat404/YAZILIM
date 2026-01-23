@@ -8,7 +8,7 @@ bool asal(int n) {
     // 2'den küçük sayılar (0 ve 1) asal değildir
     if (n < 2) return false;
     
-    // Performans için sayının kareköküne kadar bölünebilirlik kontrolü yapılır
+    // Sayının kareköküne kadar bölünebilirlik kontrolü yapılır
     for (int i = 2; i <= sqrt(n); i++) {
         // Eğer sayı herhangi bir değere tam bölünürse asal değildir
         if (n % i == 0) return false;
