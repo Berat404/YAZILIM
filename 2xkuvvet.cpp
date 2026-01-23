@@ -4,7 +4,7 @@
 using namespace std;
 
 // Sayının asal olup olmadığını kontrol eden fonksiyon
-bool asalMi(int n) {
+bool asal(int n) {
     // 2'den küçük sayılar (0 ve 1) asal değildir
     if (n < 2) return false;
     
@@ -19,8 +19,8 @@ bool asalMi(int n) {
 }
 
 int main() {
-    long long limit = 10000000; // 10^7 sınırı
-    long long kuvvet = 1;       // 2^0 = 1 başlangıç değeri
+    int limit = 10000000; // 10^7 sınırı
+    int kuvvet = 1;       // 2^0 = 1 başlangıç değeri
 
     cout << "2^k Civarindaki Asal Sayilar:" << endl;
     cout << "---------------------------------" << endl;
@@ -31,10 +31,10 @@ int main() {
         cout << "2^k = " << kuvvet << " icin civardaki asallar: ";
         
         // 2^k değerinin -5 ve +5 aralığındaki sayıları kontrol et
-        for (long long i = kuvvet - 5; i <= kuvvet + 5; i++) {
+        for (int i = kuvvet - 5; i <= kuvvet + 5; i++) {
             
             // Fonksiyonu çağırarak sayının asal olup olmadığını kontrol et
-            if (asalMi(i)) {
+            if (asal(i)) {
                 cout << i << " "; 
             }
         }
